@@ -13,8 +13,6 @@ class MainController extends GetxController {
 
   List<Todo> get todos => _todos;
 
-  /* start function */
-  //id에 맞게 가져오기
   Todo? getTodoById(String id) {
     try {
       return _todos.singleWhere((e) => e.id == id);
@@ -23,7 +21,6 @@ class MainController extends GetxController {
     }
   }
 
-  //컨디션에 맞게 가져오기
   List<Todo> getTodoListByCondition(bool done) {
     return _todos.where((e) => e.done == done).toList();
   }
@@ -52,5 +49,4 @@ class MainController extends GetxController {
   void deleteDone() {
     _todos.removeWhere((e) => e.done == true);
   }
-/* end function */
 }

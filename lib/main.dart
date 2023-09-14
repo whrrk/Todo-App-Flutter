@@ -22,9 +22,7 @@ class MyApp extends StatelessWidget {
       locale: null,
       defaultTransition: Transition.downToUp,
       initialRoute: '/home',
-      //종속성 주입
       initialBinding: AppBinding(),
-      //앱에서 사용 할 페이지
       getPages: [
         GetPage(
           name: '/home',
@@ -32,7 +30,6 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/todo',
-          //Q: Why id can't be used int type.
           page: () => AddTodoPage(todoId: Get.parameters['id']),
         ),
       ],

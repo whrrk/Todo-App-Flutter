@@ -12,7 +12,6 @@ class TodoCheckbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.scale(
-      // 체크박스가 작을 경우
       scale: 1.5,
       child: Checkbox(
         shape: const CircleBorder(),

@@ -5,8 +5,6 @@ import '../controllers/MainController.dart';
 import '../models/todo.dart';
 import '../widgets/actionbutton.dart';
 
-// 할일 신규 작성
-// change state
 class AddTodoPage extends StatefulWidget {
   final String? todoId;
 
@@ -83,9 +81,9 @@ class _AddTodoPageState extends State<AddTodoPage> {
                   onPressed: () {
                     final text = textController.text;
                     if (todo == null && text.isNotEmpty) {
-                      mainController.addTodo(text); // 新規追加
+                      mainController.addTodo(text);
                     } else if (todo != null) {
-                      mainController.updateText(text, todo!); // 既存更新
+                      mainController.updateText(text, todo!);
                     }
 
                     Get.back();

@@ -5,9 +5,7 @@ import 'package:flutter/cupertino.dart';
 @immutable
 class Todo {
   final String id;
-  //할일 설명
   final String description;
-  //완료 여부
   final bool done;
 
   Todo({required this.description, this.done = false}) : id = DateTime.now().millisecondsSinceEpoch.toString();
@@ -15,7 +13,6 @@ class Todo {
   const Todo.withId(
       {required this.id, required this.description, this.done = false});
 
-  // 샘플 데이터
   static const initialTodos = [
     Todo.withId(
       id: '0',
@@ -31,7 +28,6 @@ class Todo {
     ),
   ];
 
-  // 할일 업데이트 시에 설명이나 완료 여부의 변경을 위함
   Todo copy({
     String? id,
     String? description,

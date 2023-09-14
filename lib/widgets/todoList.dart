@@ -6,8 +6,6 @@ import '../controllers/MainController.dart';
 
 import 'package:get/get.dart';
 
-//Body Widget [ To do list , Button ]
-// no change state
 class TodoList extends StatelessWidget {
 
   final bool is_complete;
