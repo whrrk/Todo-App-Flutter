@@ -8,9 +8,9 @@ import 'package:get/get.dart';
 
 class TodoList extends StatelessWidget {
 
-  final bool is_complete;
+  final bool done;
 
-  TodoList(this.is_complete, {Key? key}) : super(key: key);
+  TodoList(this.done, {Key? key}) : super(key: key);
 
   final mainController = Get.find<MainController>();
 
@@ -23,7 +23,7 @@ class TodoList extends StatelessWidget {
         children: [
           Obx(
                 () {
-              final todos = mainController.getTodoListByCondition(is_complete);
+              final todos = mainController.getTodoListByCondition(done);
               return ListView.builder(
                 itemCount: todos.length,
                 itemBuilder: (context, index) {

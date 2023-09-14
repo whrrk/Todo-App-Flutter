@@ -45,8 +45,4 @@ class MainController extends GetxController {
   void remove(Todo todo) {
     _todos.remove(todo);
   }
-
-  void deleteDone() {
-    _todos.removeWhere((e) => e.done == true);
-  }
 }

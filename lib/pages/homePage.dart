@@ -23,12 +23,16 @@ class HomePage extends StatelessWidget {
             children: [
               TabBar(tabs: [
                 Tab(child: Row(
-                      children:[Text('할 일',style: TextStyle(color: Colors.black))],
+                      children:[
+                        Text('할 일',style: TextStyle(color: Colors.black))
+                      ],
                       mainAxisAlignment: MainAxisAlignment.center
                     )
                 ),
                 Tab(child: Row(
-                      children:[Text('완료',style: TextStyle(color: Colors.black))],
+                      children:[
+                        Text('완료',style: TextStyle(color: Colors.black))
+                      ],
                       mainAxisAlignment: MainAxisAlignment.center
                     )
                 ),

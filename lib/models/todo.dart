@@ -39,31 +39,4 @@ class Todo {
       done: done ?? this.done,
     );
   }
-
-  factory Todo.fromJson(String json) {
-    final mapData = jsonDecode(json);
-    return Todo.withId(
-      id: mapData['id'] as String,
-      description: mapData['text'] as String,
-      done: mapData['done'] as bool,
-    );
-  }
-
-  String toJson() {
-    return jsonEncode({
-      'id': id,
-      'text': description,
-      'done': done,
-    });
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-    return other is Todo && other.id == id;
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(id.hashCode, description.hashCode, done.hashCode);
 }
